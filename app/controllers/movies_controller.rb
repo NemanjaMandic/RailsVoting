@@ -5,7 +5,7 @@ class MoviesController < ApplicationController
   # GET /movies
   # GET /movies.json
   def index
-    @movies = Movie.all.order(:cached_votes_score => :desc)
+    @movies = Movie.all.order(:cached_weighted_score => :desc)
   end
 
   # GET /movies/1
